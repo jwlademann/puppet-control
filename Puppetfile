@@ -86,7 +86,7 @@ mod 'puppetlabs/inifile',              '1.5.0'
 mod 'puppetlabs/java',                 '1.3.0'
 mod 'puppetlabs/pe_gem',               '0.2.0'
 mod 'puppetlabs/ruby',                 '0.5.0'
-mod 'puppetlabs/stdlib',               '4.15.0’
+mod 'puppetlabs/stdlib',               '4.15.0'
 mod 'puppetlabs/vcsrepo',              '1.3.2'
 mod 'richardc/datacat',                '0.6.2'
 mod 'stahnma/epel',                    '1.2.2'
