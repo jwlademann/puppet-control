@@ -67,6 +67,8 @@ mod 'landregistry/opendj',             :git => 'https://github.com/LandRegistry-
                                        :ref => '37908f0c8305cb1d5fb83824207c42aa6374d3e8'
 mod 'landregistry/openresty',          :git => 'https://github.com/LandRegistry-Ops/puppet-openresty.git',
                                        :ref => '7ff28006a228c22d8ff768f4b10d29abc3f081f4'
+mod 'biemond-wildfly',                 :git => 'https://github.com/biemond/biemond-wildfly.git',
+                                       :ref => 'v1.2.8'
 
 # Dependency modules
 mod 'ceritsc/yum',                     '0.9.8'
@@ -84,9 +86,10 @@ mod 'puppetlabs/inifile',              '1.5.0'
 mod 'puppetlabs/java',                 '1.3.0'
 mod 'puppetlabs/pe_gem',               '0.2.0'
 mod 'puppetlabs/ruby',                 '0.5.0'
-mod 'puppetlabs/stdlib',               '4.12.0'
+mod 'puppetlabs/stdlib',               '4.15.0’
 mod 'puppetlabs/vcsrepo',              '1.3.2'
 mod 'richardc/datacat',                '0.6.2'
 mod 'stahnma/epel',                    '1.2.2'
 mod 'ajjahn/dns',                      '2.0.2'
 mod 'dsestero/download_uncompress',    '1.3.0'
+mod 'jethrocarr/initfact',             '1.0.1'
