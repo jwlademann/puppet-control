@@ -1,7 +1,7 @@
 #host controller for slave
 
-class profiles::eap_slave(
-  dc = '127.0.0.1'
+class profiles::eap_slave (
+  $dc = '127.0.0.1'
 ){
 
   # Assume that if we have multiple interfaces that eth1 is the data
