@@ -6,4 +6,4 @@ classes:
 packages:
  - java-1.8.0-openjdk
 
-wildfly::version: 7.1
+wildfly::version: '7.1'
