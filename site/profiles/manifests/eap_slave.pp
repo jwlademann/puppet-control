@@ -1,6 +1,8 @@
 #host controller for slave
 
-class profiles::eap_slave(){
+class profiles::eap_slave(
+  dc = '127.0.0.1'
+){
 
   # Assume that if we have multiple interfaces that eth1 is the data
   if ($::ipaddress_eth1) {
@@ -23,6 +25,7 @@ class profiles::eap_slave(){
     properties   => {
       'jboss.bind.address'            => $data_addr,
       'jboss.bind.address.management' => $mgmt_addr,
+      'jboss.domain.master.address'   => $dc
     }
   }
 }
