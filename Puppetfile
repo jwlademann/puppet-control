@@ -50,7 +50,7 @@ mod 'puppet-logstash',                 :git => 'https://github.com/LandRegistry-
                                        :ref => '1.0.9'
 mod 'willdurand/nodejs',               '1.9.5'
 mod 'puppet-rabbit',                   :git => 'https://github.com/LandRegistry-Ops/puppet-rabbit.git',
-                                       :ref => '3.0.6'
+                                       :ref => '3.0.9'
 mod 'puppet-elastic',                  :git => 'https://github.com/LandRegistry-Ops/puppet-elastic.git',
                                        :ref => '3.0.17'
 mod 'puppet-kibana',                   :git => 'https://github.com/LandRegistry-Ops/elastic-puppet-kibana.git',
@@ -63,13 +63,19 @@ mod 'puppet-nagiosclient',             :git => 'https://github.com/LandRegistry-
                                        :ref => '0.13.0'
 mod 'landregistry/powerdns',           :git => 'https://github.com/LandRegistry-Ops/puppet-powerdns.git',
                                        :ref => '0.2.1'
+mod 'landregistry/security',           :git => 'https://github.com/LandRegistry-Ops/puppet-security.git',
+                                       :ref => '0.3.3'
 mod 'ghoneycutt/hosts',                '2.5.0'
 mod 'puppet-opendj',                   :git => 'https://github.com/LandRegistry-Ops/puppet-opendj.git',
                                        :ref => '9292bef79f3cec83d88080268a687cace382a08d'
 mod 'puppet-openresty',                :git => 'https://github.com/LandRegistry-Ops/puppet-openresty.git',
-                                       :ref => '3c5b5be3a28351fffffafd590c181ba396de8676'
+                                       :ref => '7023eaf5ff710c499888303d745a7e385aaf88e0'
+mod 'landregistry/static_content',     :git => 'https://github.com/LandRegistry/puppet-openresty-static-content.git',
+                                       :ref => '5e82f221e4a635e1bea64d8c15455c1aceaa312e'
 mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-Ops/puppet-geoserver.git',
-                                       :ref => '5364badd3faa9962adab1375b246d962796d6a23'
+                                       :ref => '3045ad234315f4bc826e130db6b1433fdf52836b'
+mod 'attachmentgenie-mailhog',         '1.0.0'
+
 # Dependency modules
 mod 'ceritsc/yum',                           '0.9.8'
 mod 'croddy/make',                           '0.0.5'
