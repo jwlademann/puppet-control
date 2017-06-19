@@ -102,5 +102,5 @@ mod 'herculesteam-augeasproviders_core',     '2.1.3'
 mod 'herculesteam-augeasproviders_shellvar', '2.2.1'
 mod 'camptocamp-systemd',                    '0.4.0'
 #mod 'camptocamp-tomcat',                     '0.16.2'
-mod 'landregistry/tomcat', :git => 'https://github.com/LandRegistry-Ops/puppet-security.git',
+mod 'landregistry/tomcat', :git => 'https://github.com/LandRegistry-Ops/puppet-tomcat.git',
                            :ref => '0.1.0'
