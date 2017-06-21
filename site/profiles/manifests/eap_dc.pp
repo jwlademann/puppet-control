@@ -2,6 +2,10 @@
 
 class profiles::eap_dc(){
 
+  $repository_source = hiera('wildfly::repository_source')
+  $modules = [ "${wildfly::dirname}/modules/com", "${wildfly::dirname}/modules/com/ibm","${wildfly::dirname}/modules/com/ibm/main",
+              "${wildfly::dirname}/modules/com/oracle","${wildfly::dirname}/modules/com/oracle/main"]
+
   class { '::wildfly':
     distribution => 'jboss-eap',
     console_log  => '/var/log/jboss-eap/console.log',
@@ -9,8 +13,6 @@ class profiles::eap_dc(){
     mode         => 'domain',
     host_config  => 'host-master.xml',
   }
-  $modules = [ "${wildfly::dirname}/modules/com", "${wildfly::dirname}/modules/com/ibm","${wildfly::dirname}/modules/com/ibm/main",
-              "${wildfly::dirname}/modules/com/oracle","${wildfly::dirname}/modules/com/oracle/main"]
   file { $modules:
     ensure  => 'directory',
     owner   => $wildfly::user,
@@ -25,21 +27,23 @@ class profiles::eap_dc(){
     recurse => true,
     require => File[$modules]
   }
-  file { "${wildfly::dirname}/modules/com/ibm/main/db2jcc_license_cisuz.jar":
-    ensure  => present,
-    owner   => $wildfly::user,
-    group   => $wildfly::group,
-    source  => 'puppet:///modules/profiles/jboss-eap/ibm/db2jcc_license_cisuz.jar',
-    recurse => true,
-    require => File[$modules],
+  exec { "download ibm driver license":
+    command  => "wget ${repository_source}/db2jcc_license_cisuz.jar -P ${wildfly::dirname}/modules/com/ibm/main",
+    path     => ['/bin', '/usr/bin', '/sbin'],
+    loglevel => 'notice',
+    user     => $wildfly::user,
+    group    => $wildfly::group,
+    creates  => "${wildfly::dirname}/modules/com/ibm/main/db2jcc_license_cisuz.jar",
+    require  => File[$modules],
   }
-  file { "${wildfly::dirname}/modules/com/ibm/main/db2jcc4.jar":
-    ensure  => present,
-    owner   => $wildfly::user,
-    group   => $wildfly::group,
-    source  => 'puppet:///modules/profiles/jboss-eap/ibm/module.xml',
-    recurse => true,
-    require => File[$modules],
+  exec { "download ibm driver":
+    command  => "wget ${repository_source}/db2jcc4.jar -P ${wildfly::dirname}/modules/com/ibm/main",
+    path     => ['/bin', '/usr/bin', '/sbin'],
+    loglevel => 'notice',
+    user     => $wildfly::user,
+    group    => $wildfly::group,
+    creates  => "${wildfly::dirname}/modules/com/ibm/main/db2jcc4.jar",
+    require  => File[$modules],
   }
   file { "${wildfly::dirname}/modules/com/oracle/main/module.xml":
     ensure  => present,
@@ -49,13 +53,14 @@ class profiles::eap_dc(){
     recurse => true,
     require => File[$modules]
   }
-  file { "${wildfly::dirname}/modules/com/oracle/main/ojdbc7.jar":
-    ensure  => present,
-    owner   => $wildfly::user,
-    group   => $wildfly::group,
-    source  => 'puppet:///modules/profiles/jboss-eap/oracle/module.xml',
-    recurse => true,
-    require => File[$modules],
+  exec { "download oracle driver":
+    command  => "wget ${repository_source}/ojdbc7.jar -P ${wildfly::dirname}/modules/com/oracle/main",
+    path     => ['/bin', '/usr/bin', '/sbin'],
+    loglevel => 'notice',
+    user     => $wildfly::user,
+    group    => $wildfly::group,
+    creates  => "${wildfly::dirname}/modules/com/oracle/main/ojdbc7.jar",
+    require  => File[$modules],
   }
 
   $dc_server_groups = hiera_hash('wildfly::dc_server_groups',false)
