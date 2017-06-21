@@ -3,6 +3,7 @@ classes:
   - profiles::packages
   - profiles::eap_dc
 
+wildfly::repository_source: 'http://192.168.50.14'
 wildfly::version: '7.1'
 wildfly::install_source: 'http://192.168.50.14/jboss-eap-7.1.0.Alpha.tar.gz'
 wildfly::dirname: '/opt/jboss-eap'
