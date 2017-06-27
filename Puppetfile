@@ -77,7 +77,8 @@ mod 'landregistry/static_content',     :git => 'https://github.com/LandRegistry/
 mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-Ops/puppet-geoserver.git',
                                        :ref => '3045ad234315f4bc826e130db6b1433fdf52836b'
 mod 'attachmentgenie-mailhog',         '1.0.0'
-mod 'arioch-redis',                    '3.1.0'
+mod 'puppet-redis',                    :git => 'https://github.com/arioch/puppet-redis.git',
+                                       :ref => '3.1.1'
 
 # Dependency modules
 mod 'ceritsc/yum',                           '0.9.8'
