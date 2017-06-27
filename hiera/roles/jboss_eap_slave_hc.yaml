@@ -3,12 +3,9 @@ classes:
   - profiles::packages
   - profiles::eap_slave
 
+profiles::eap_slave::dc: 192.168.42.49
 wildfly::version: '7.1'
 wildfly::install_source: 'http://192.168.35.60/jboss-eap-7.1.0.Alpha.tar.gz'
-wildfly::properties:
-  'jboss.bind.address.management': '192.168.42.52'
-  'jboss.bind.address': '192.168.42.52'
-  'jboss.domain.master.address': '192.168.42.49'
 wildfly::remote_username: 'slave'
 wildfly::secret_value: 'cGFzc3cwcmQh'
 
