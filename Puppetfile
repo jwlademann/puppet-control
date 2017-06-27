@@ -66,10 +66,10 @@ mod 'landregistry/powerdns',           :git => 'https://github.com/LandRegistry-
 mod 'landregistry/security',           :git => 'https://github.com/LandRegistry-Ops/puppet-security.git',
                                        :ref => '0.3.3'
 mod 'ghoneycutt/hosts',                '2.5.0'
-mod 'puppet-opendj',                   :git => 'https://github.com/LandRegistry-Ops/puppet-opendj.git',
-                                       :ref => '9292bef79f3cec83d88080268a687cace382a08d'
-mod 'puppet-openresty',                :git => 'https://github.com/LandRegistry-Ops/puppet-openresty.git',
-                                       :ref => '7023eaf5ff710c499888303d745a7e385aaf88e0'
+mod 'landregistry-opendj',             :git => 'https://github.com/LandRegistry-Ops/puppet-opendj.git',
+                                       :ref => '37908f0c8305cb1d5fb83824207c42aa6374d3e8'
+mod 'landregistry-openresty',          :git => 'https://github.com/LandRegistry-Ops/puppet-openresty.git',
+                                       :ref => '7ff28006a228c22d8ff768f4b10d29abc3f081f4'
 mod 'landregistry/static_content',     :git => 'https://github.com/LandRegistry/puppet-openresty-static-content.git',
                                        :ref => '98f5a96bf1da869891992129719598e865c8742b'
 mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-Ops/puppet-geoserver.git',
@@ -77,6 +77,8 @@ mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-
 mod 'attachmentgenie-mailhog',         '1.0.0'
 mod 'landregistry/lrtomcat',           :git => 'https://github.com/LandRegistry-Ops/puppet-tomcat.git',
                                        :ref => '0.1.0'
+mod 'biemond-wildfly',                 :git => 'https://github.com/biemond/biemond-wildfly.git',
+                                       :ref => 'v1.2.8'
 
 # Dependency modules
 mod 'ceritsc/yum',                           '0.9.8'
@@ -94,11 +96,13 @@ mod 'puppetlabs/inifile',                    '1.5.0'
 mod 'puppetlabs/java',                       '1.3.0'
 mod 'puppetlabs/pe_gem',                     '0.2.0'
 mod 'puppetlabs/ruby',                       '0.5.0'
-mod 'puppetlabs/stdlib',                     '4.12.0'
+mod 'puppetlabs/stdlib',                     '4.15.0'
 mod 'puppetlabs/vcsrepo',                    '1.3.2'
 mod 'richardc/datacat',                      '0.6.2'
 mod 'stahnma/epel',                          '1.2.2'
 mod 'ajjahn/dns',                            '2.0.2'
+mod 'dsestero/download_uncompress',          '1.3.0'
+mod 'jethrocarr/initfact',                   '1.0.1'
 mod 'dsestero/download_uncompress',          '1.3.0'
 mod 'herculesteam-augeasproviders_core',     '2.1.3'
 mod 'herculesteam-augeasproviders_shellvar', '2.2.1'
