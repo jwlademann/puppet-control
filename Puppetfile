@@ -7,7 +7,6 @@ mod 'alphagov/account',                :git => 'https://github.com/alphagov/pupp
 mod 'puppet-elasticsearch_old',        :git => 'https://github.com/LandRegistry-Ops/puppet-elasticsearch_old.git',
                                        :ref => '0.11.11'
 mod 'elastic/elasticsearch',           '5.1.0'
-mod 'evenup/redis',                    '1.3.1'
 mod 'ispavailability/file_concat',     '0.2.1'
 mod 'jfryman/nginx',                   '0.3.0'
 mod 'jfryman/selinux',                 '0.4.0'
