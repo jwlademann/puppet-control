@@ -75,6 +75,8 @@ mod 'landregistry/static_content',     :git => 'https://github.com/LandRegistry/
 mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-Ops/puppet-geoserver.git',
                                        :ref => '3045ad234315f4bc826e130db6b1433fdf52836b'
 mod 'attachmentgenie-mailhog',         '1.0.0'
+mod 'landregistry/lrtomcat',           :git => 'https://github.com/LandRegistry-Ops/puppet-tomcat.git',
+                                       :ref => '0.1.0'
 
 # Dependency modules
 mod 'ceritsc/yum',                           '0.9.8'
@@ -101,6 +103,4 @@ mod 'dsestero/download_uncompress',          '1.3.0'
 mod 'herculesteam-augeasproviders_core',     '2.1.3'
 mod 'herculesteam-augeasproviders_shellvar', '2.2.1'
 mod 'camptocamp-systemd',                    '0.4.0'
-#mod 'camptocamp-tomcat',                     '0.16.2'
-mod 'landregistry/tomcat', :git => 'https://github.com/LandRegistry-Ops/puppet-tomcat.git',
-                           :ref => '0.1.0'
+mod 'camptocamp-tomcat',                     '0.16.2'
