@@ -13,7 +13,7 @@ mod 'jfryman/selinux',                 '0.4.0'
 mod 'puppet-gradle',                   :git => 'https://github.com/LandRegistry-Ops/puppet-gradle.git',
                                        :ref => '8aec2ee291a34e79531a0045a7c0027aaa8138d8'
 mod 'puppet-wsgi',                     :git => 'https://github.com/LandRegistry-Ops/puppet-wsgi.git',
-                                       :ref => '1.3.11'
+                                       :ref => '1.3.14'
 mod 'leinaddm/htpasswd',               '0.0.3'
 mod 'maestrodev/wget',                 '1.7.3'
 mod 'openstackci/pip',                 :git => 'https://github.com/openstack-infra/puppet-pip.git',
@@ -41,8 +41,10 @@ mod 'puppet-dnsserver',                :git => 'https://github.com/LandRegistry-
                                        :ref => '5be34a1c13b4f1b754a2307a3b1b27936e563ff2'
 mod 'puppet-files',                    :git => 'https://github.com/LandRegistry-Ops/puppet-files.git',
                                        :ref => '3d3cbee15a91abf160275abe7d2961cf89beba77'
+mod 'puppet-crons',                    :git => 'https://github.com/LandRegistry-Ops/puppet-crons.git',
+                                       :ref => '1.0.0'
 mod 'puppet-filebeat',                 :git => 'https://github.com/LandRegistry-Ops/puppet-filebeat.git',
-                                       :ref => '1.0.8'
+                                       :ref => '1.0.9'
 mod 'puppet-packetbeat',               :git => 'https://github.com/LandRegistry-Ops/puppet-packetbeat.git',
                                        :ref => '1.0.5'
 mod 'puppet-logstash',                 :git => 'https://github.com/LandRegistry-Ops/puppet-logstash.git',
@@ -61,7 +63,7 @@ mod 'puppet-nagios',                   :git => 'https://github.com/LandRegistry-
 mod 'puppet-nagiosclient',             :git => 'https://github.com/LandRegistry-Ops/puppet-nagiosclient.git',
                                        :ref => '0.13.0'
 mod 'puppet-postgres',                 :git => 'https://github.com/LandRegistry-Ops/puppet-postgres.git',
-                                       :ref => '1.0.2'
+                                       :ref => '1.0.5'
 mod 'landregistry/powerdns',           :git => 'https://github.com/LandRegistry-Ops/puppet-powerdns.git',
                                        :ref => '0.3.0'
 mod 'landregistry/security',           :git => 'https://github.com/LandRegistry-Ops/puppet-security.git',
