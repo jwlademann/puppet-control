@@ -7,7 +7,6 @@ mod 'alphagov/account',                :git => 'https://github.com/alphagov/pupp
 mod 'puppet-elasticsearch_old',        :git => 'https://github.com/LandRegistry-Ops/puppet-elasticsearch_old.git',
                                        :ref => '0.11.11'
 mod 'elastic/elasticsearch',           '5.1.0'
-mod 'evenup/redis',                    '1.3.1'
 mod 'ispavailability/file_concat',     '0.2.1'
 mod 'jfryman/nginx',                   '0.3.0'
 mod 'jfryman/selinux',                 '0.4.0'
@@ -79,6 +78,8 @@ mod 'landregistry/static_content',     :git => 'https://github.com/LandRegistry/
 mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-Ops/puppet-geoserver.git',
                                        :ref => '3045ad234315f4bc826e130db6b1433fdf52836b'
 mod 'attachmentgenie-mailhog',         '1.0.0'
+mod 'puppet-redis',                    :git => 'https://github.com/arioch/puppet-redis.git',
+                                       :ref => '1.2.3'
 
 # Dependency modules
 mod 'ceritsc/yum',                           '0.9.8'
