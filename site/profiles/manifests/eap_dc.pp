@@ -16,6 +16,7 @@ class profiles::eap_dc(){
     user         => 'jboss-eap',
     group        => 'jboss-eap',
     dirname      => '/opt/jboss-eap',
+    java_home    => '/usr/lib/jvm/jre',
     console_log  => '/var/log/jboss-eap/console.log',
     mode         => 'domain',
     host_config  => 'host-master.xml',
