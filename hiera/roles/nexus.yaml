@@ -1,0 +1,14 @@
+---
+classes:
+  - profiles::packages
+  - profiles::nexus
+
+nexus::version: '3.0.0'
+nexus::download_site: 'http://download.sonatype.com/nexus/3'
+nexus::revision: '03'
+nexus::nexus_root: '/opt'
+nexus::nexus_type: 'unix'
+nexus::nexus_work_dir_manage: false
+
+packages:
+  - java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3
