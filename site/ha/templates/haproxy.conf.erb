@@ -30,10 +30,11 @@ listen <%= name %> *:<%= config['port'] %>
   server <%= backend.split(':')[0] %> <%= backend %> check inter 5s rise 2 fall 3
 <% end -%>
 <% else -%>
-<% if @sticky == true -%>
+<% if config['sticky'] == true -%>
     cookie JSESSIONID prefix
     option httpchk GET  <%= config['healthcheck'] %>
 <% config['backends'].each do |backend| -%>
+    # Backend <%= backend %> with sticky sessions
     server <%= backend.split(':')[0] %> <%= backend %> cookie check
 <% end -%>
 
