@@ -78,7 +78,7 @@ mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-
                                        :ref => '3045ad234315f4bc826e130db6b1433fdf52836b'
 mod 'attachmentgenie-mailhog',         '1.0.0'
 mod 'landregistry/lrtomcat',           :git => 'https://github.com/LandRegistry-Ops/puppet-tomcat.git',
-                                       :ref => '0.2.0'
+                                       :ref => '0.2.1'
 mod 'biemond-wildfly',                 :git => 'https://github.com/biemond/biemond-wildfly.git',
                                        :ref => 'v1.2.8'
 
