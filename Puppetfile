@@ -48,7 +48,7 @@ mod 'puppet-filebeat',                 :git => 'https://github.com/LandRegistry-
 mod 'puppet-packetbeat',               :git => 'https://github.com/LandRegistry-Ops/puppet-packetbeat.git',
                                        :ref => '1.0.5'
 mod 'puppet-logstash',                 :git => 'https://github.com/LandRegistry-Ops/puppet-logstash.git',
-                                       :ref => '1.0.10'
+                                       :ref => '1.0.9'
 mod 'willdurand/nodejs',               '1.9.5'
 mod 'puppet-rabbit',                   :git => 'https://github.com/LandRegistry-Ops/puppet-rabbit.git',
                                        :ref => '3.0.9'
@@ -63,7 +63,7 @@ mod 'puppet-nagios',                   :git => 'https://github.com/LandRegistry-
 mod 'puppet-nagiosclient',             :git => 'https://github.com/LandRegistry-Ops/puppet-nagiosclient.git',
                                        :ref => '0.13.0'
 mod 'puppet-postgres',                 :git => 'https://github.com/LandRegistry-Ops/puppet-postgres.git',
-                                       :ref => '1.0.6'
+                                       :ref => '1.0.5'
 mod 'landregistry/powerdns',           :git => 'https://github.com/LandRegistry-Ops/puppet-powerdns.git',
                                        :ref => '0.3.0'
 mod 'landregistry/security',           :git => 'https://github.com/LandRegistry-Ops/puppet-security.git',
@@ -80,6 +80,9 @@ mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-
 mod 'attachmentgenie-mailhog',         '1.0.0'
 mod 'puppet-redis',                    :git => 'https://github.com/arioch/puppet-redis.git',
                                        :ref => '1.2.3'
+mod 'puppet-pulp',                     :git => 'https://github.com/LandRegistry-Ops/puppet-pulp',
+                                       :ref => '7af5f297e95d6e8a159924fe4ec858792ab8f86f'
+
 
 # Dependency modules
 mod 'ceritsc/yum',                           '0.9.8'
