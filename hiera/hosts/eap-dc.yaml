@@ -172,6 +172,26 @@ wildfly::naming:
          'binding-type': 'simple'
          'value': '/opt/jboss-eap/fonts'
 
+wildfly::system-properties:
+   '/system-property=MQ.hostName':
+    content:
+      'value': 00.00.00.00
+   '/system-property=MQ.port':
+    content:
+      'value': 0000
+   '/system-property=MQ.queueManager':
+    content:
+      'value': X1B1
+   '/system-property=MQ.channel':
+    content:
+      'value': SYSTEM.XXX.XXX
+   '/system-property=MQ.transportType':
+    content:
+      'value': CLIENT
+   '/system-property=MQ.username':
+    content:
+     'value': username
+
 wildfly::resource_adapters:
   '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar':
    content:
