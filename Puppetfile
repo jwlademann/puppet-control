@@ -80,6 +80,9 @@ mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-
 mod 'attachmentgenie-mailhog',         '1.0.0'
 mod 'puppet-redis',                    :git => 'https://github.com/arioch/puppet-redis.git',
                                        :ref => '1.2.3'
+mod 'puppet-pulp',                     :git => 'https://github.com/LandRegistry-Ops/puppet-pulp',
+                                       :ref => '0.0.1'
+
 
 # Dependency modules
 mod 'ceritsc/yum',                           '0.9.8'
