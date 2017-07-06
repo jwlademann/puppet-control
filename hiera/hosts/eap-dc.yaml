@@ -171,5 +171,62 @@ wildfly::naming:
     content:
          'binding-type': 'simple'
          'value': '/opt/jboss-eap/fonts'
+
+wildfly::resource_adapters:
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar':
+   content:
+     'archive': 'wmq.jmsra.rar'
+     'transaction-support': 'XATransaction'
+#config-properties
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/config-properties=connectionConcurrency':
+   content:
+     'value': 10
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/config-properties=logWriterEnabled':
+   content:
+     'value': false
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/config-properties=traceEnabled':
+   content:
+     'value': false
+#admin-objects
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/admin-objects=wmqECEVEQueue':
+   content:
+    'class-name': 'com.ibm.mq.connector.outbound.MQQueueProxy'
+    'enabled': true
+    'jndi-name': 'java:/jms/ECEVEQueue'
+    'use-java-context': true
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/admin-objects=wmqECEVEQueue/config-properties=baseQueueName':
+   content:
+    'value': 'ecrfs.venu3'
+#connection-definations
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/connection-definitions=wmqCF':
+    content:
+     'class-name': 'com.ibm.mq.connector.outbound.ManagedQueueConnectionFactoryImpl'
+     'enabled': true
+     'jndi-name': 'java:/jms/wmqCF'
+     'use-java-context': true
+     'min-pool-size': 10
+     'max-pool-size': 100
+     'pool-prefill': false
+     'pool-use-strict-min': true
+     'flush-strategy': 'FailingConnectionOnly'
+     'allocation-retry': 3
+     'allocation-retry-wait-millis': 5000
+     'no-recovery': true
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/connection-definitions=wmqCF/config-properties=hostName':
+   content:
+    'value': 'localhost'
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/connection-definitions=wmqCF/config-properties=transportType':
+   content:
+    'value': 'CIENT'
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/connection-definitions=wmqCF/config-properties=queueManager':
+   content:
+    'value': 'test'
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/connection-definitions=wmqCF/config-properties=port':
+   content:
+    'value': '10005'
+  '/profile=full-ha/subsystem=resource-adapters/resource-adapter=wmq.jmsra.rar/connection-definitions=wmqCF/config-properties=username':
+   content:
+    'value': 'username'
+
 packages:
   - java-1.8.0-openjdk-1.8.0.121-0.b13.el7_3
