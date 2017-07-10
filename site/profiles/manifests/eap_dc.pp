@@ -106,8 +106,8 @@ class profiles::eap_dc(){
   $naming = hiera_hash('wildfly::naming',false)
   create_resources('wildfly::resource',$naming)
 
-  $system_properties = hiera_hash('wildfly::system-properties',false)
-  create_resources('wildfly::resource', $system_properties)
+  #$system_properties = hiera_hash('wildfly::system-properties',false)
+  #create_resources('wildfly::resource', $system_properties)
 
   $resource_adapters = hiera_hash('wildfly::resource_adapters',false)
   create_resources('wildfly::resource', $resource_adapters)
