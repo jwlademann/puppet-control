@@ -3,14 +3,35 @@ class { 'ha':
   interface    => 'eth0',
   lb_instances => {
     'default' => {
-      'port'        => 80,
+      'port'        => 5000,
       'healthcheck' => '/',
       'backends'    => [ 'localhost:8080', 'localhost:8081']
     },
-    'test'    => {
-      'listen_port' => 9000,
+    'sticky-test'    => {
+      'port' => 5001,
+      'sticky' => true,
       'healthcheck' => '/health',
-      'backends'    => [ 'airbnb.com' ]
+      'backends'    => [ 'localhost:8080', 'localhost:8081']
+    },
+    'tcp-test' => {
+      'port' => 5002,
+      'mode' => 'tcp',
+      'backends'    => [ 'localhost:8080', 'localhost:8081']
+    },
+    'auth-test' => {
+      'port'        => 5003,
+      'auth_group'  => 'admin',
+      'backends'    => [ 'localhost:8080', 'localhost:8081']
+    },
+    'failover-test' => {
+      'port' => 5004,
+      'backends'    => [ 'localhost:8080', 'localhost:8081'],
+      'failover'    => [ 'localhost:8082', 'localhost:8083'],
+    }
+  },
+  auth_users => {
+    'admin' => {
+      'test' => 'password'
     }
   }
 }

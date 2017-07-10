@@ -57,18 +57,14 @@ class ha (
   include stdlib
 
   # If we're using haproxy then lb_instances hash must be supplied
-  if $use_haproxy {
-  validate_hash($lb_instances)
-  }
   validate_string($interface)
   validate_string($virtual_ip)
   validate_bool($sticky)
-  if $auth_users != undef {
-  validate_hash($auth_users)
-  }
   validate_bool($use_haproxy)
   validate_string($track_script_name)
   validate_string($track_script_cmd)
+  if $use_haproxy { validate_hash($lb_instances) }
+  if $auth_users { validate_hash($auth_users) }
 
   unless has_interface_with($interface) {
     fail("${interface} is not a valid network port")
