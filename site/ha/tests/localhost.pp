@@ -2,7 +2,7 @@ class { 'ha':
   virtual_ip   => '192.168.99.10',
   interface    => 'eth0',
   lb_instances => {
-    'default' => {
+    'default'     => {
       'port'        => 5000,
       'healthcheck' => '/',
       'backends'    => [ 'localhost:8080', 'localhost:8081']
@@ -13,12 +13,12 @@ class { 'ha':
       'healthcheck' => '/health',
       'backends'    => [ 'localhost:8080', 'localhost:8081']
     },
-    'tcp-test' => {
+    'tcp-test'     => {
       'port'     => 5002,
       'mode'     => 'tcp',
       'backends' => [ 'localhost:8080', 'localhost:8081']
     },
-    'auth-test' => {
+    'auth-test'    => {
       'port'       => 5003,
       'auth_group' => 'admin',
       'backends'   => [ 'localhost:8080', 'localhost:8081']
