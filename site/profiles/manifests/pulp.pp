@@ -11,6 +11,7 @@ class profiles::pulp(
     messaging_transport => $pulp::messaging_transport
     }
   class { '::pulp::consumer':
+    host                => $pulp::consumer::host,
     messaging_host      => $pulp::consumer::messaging_host,
     messaging_transport => $pulp::consumer::messaging_transport,
     messaging_port      => $pulp::consumer::messaging_port
