@@ -22,8 +22,8 @@ class profiles::pulp(
     stage => 'justbefore',
   } ->
   class { '::pulp::reposetup':
-    rpmrepos  => $rpmrepos,
-    stage     => 'last',
+    rpmrepos => $rpmrepos,
+    stage    => 'last',
     }
 
 }
