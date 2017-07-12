@@ -28,13 +28,40 @@ defaults
 listen <%= name %> *:<%= config['port'] %>
 
   balance roundrobin
+    <%- # TCP CONFIGURATION -%>
     <%- if config['mode'] == 'tcp' -%>
   mode    tcp
+    <%- # REDIS CONFIGURATION -%>
+    <%- elsif config['mode'] == 'redis' -%>
+  mode    tcp
+  option  redis-check
+      <%- if config['backends'].length > 1 -%>
+        <%-
+          # If more than one backend is configured we can assume Redis is
+          # clustered; we should therefore perform a check to see which node is
+          # assigned the master role.
+        -%>
+  option  tcp-check
+
+  tcp-check send info replicationrn
+  tcp-check expect string role:master
+  tcp-check send QUITrn
+  tcp-check expect string +OK
+      <%- end -%>
+
+  timeout connect  4s
+  timeout server   30s
+  timeout client   30s
+    <%- # HTTP CONFIGURATION -%>
     <%- else -%>
   mode    http
   option  httpchk GET <%= config['healthcheck'] %>
   option  forwardfor header X-Forwarded-For
 
+      <%-
+        # So that we can still identify the original source of HTTP requests
+        # certain headers need to be set on all HTTP requests that are proxied.
+      -%>
   http-request set-header X-Client-IP %[src]
   http-request set-header X-Real-IP %[req.hdr_ip(X-Forwarded-For,1)]
       <%- if config['auth_group'] -%>
@@ -43,6 +70,10 @@ listen <%= name %> *:<%= config['port'] %>
   acl <%= config['auth_group'] %> http_auth(<%= config['auth_group'] %>)
       <%- end -%>
       <%- if config['sticky'] == true -%>
+        <%-
+          # Sticky sessions are recorded in a client cookie called JSESSIONID.
+          # This is only used by stateful Java applications at the moment.
+        -%>
 
   cookie JSESSIONID prefix
       <%- end -%>
