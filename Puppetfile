@@ -74,7 +74,7 @@ mod 'puppet-opendj',                   :git => 'https://github.com/LandRegistry-
 mod 'puppet-openresty',                :git => 'https://github.com/LandRegistry-Ops/puppet-openresty.git',
                                        :ref => '7023eaf5ff710c499888303d745a7e385aaf88e0'
 mod 'landregistry/static_content',     :git => 'https://github.com/LandRegistry/puppet-openresty-static-content.git',
-                                       :ref => 'a6be24bf019761c08c586783e96a0d5234202236'
+                                       :ref => 'a247028a20ec5e5c1062e3fffcfc4d90c0557b76'
 mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-Ops/puppet-geoserver.git',
                                        :ref => '3045ad234315f4bc826e130db6b1433fdf52836b'
 mod 'attachmentgenie-mailhog',         '1.0.0'
