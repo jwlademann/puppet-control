@@ -2,7 +2,7 @@
 #
 # Installs tools required for packaging python apps into RPMS
 #
-class python_rpm_build_tools () {
+class profiles::python_rpm_build_tools () {
 
   package {
 
