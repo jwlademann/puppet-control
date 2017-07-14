@@ -4,19 +4,19 @@
 #
 class python_rpm_build_tools () {
 
-  package { 
+  package {
 
   "virtualenv":
-    ensure => latest,
+    ensure   => latest,
     provider => "pip3";
 
   "virtualenv-tools":
-    ensure => present,
+    ensure   => present,
     provider => "pip3",
-    source => "git+https://github.com/Yelp/virtualenv-tools.git";
+    source   => "git+https://github.com/Yelp/virtualenv-tools.git";
 
   "fpm":
-    ensure => present,
+    ensure   => present,
     provider => "gem",
   }
 
