@@ -84,6 +84,9 @@ class profiles::eap_dc(){
     creates  => "${wildfly::dirname}/modules/com/oracle/main/ojdbc7.jar",
     require  => File[$modules],
   }
+  
+  $app_user = hiera_hash('wildfly::app_user',false)
+  create_resources('wildfly::config::app_user', $app_user)
 
   $dc_server_groups = hiera_hash('wildfly::dc_server_groups',false)
   create_resources('wildfly::domain::server_group', $dc_server_groups)
