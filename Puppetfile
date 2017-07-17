@@ -63,11 +63,11 @@ mod 'puppet-nagios',                   :git => 'https://github.com/LandRegistry-
 mod 'puppet-nagiosclient',             :git => 'https://github.com/LandRegistry-Ops/puppet-nagiosclient.git',
                                        :ref => '0.13.0'
 mod 'puppet-postgres',                 :git => 'https://github.com/LandRegistry-Ops/puppet-postgres.git',
-                                       :ref => '1.0.6'
+                                       :ref => '1.0.7'
 mod 'landregistry/powerdns',           :git => 'https://github.com/LandRegistry-Ops/puppet-powerdns.git',
                                        :ref => '0.3.0'
 mod 'landregistry/security',           :git => 'https://github.com/LandRegistry-Ops/puppet-security.git',
-                                       :ref => '0.3.6'
+                                       :ref => '0.3.7'
 mod 'ghoneycutt/hosts',                '2.5.0'
 mod 'puppet-opendj',                   :git => 'https://github.com/LandRegistry-Ops/puppet-opendj.git',
                                        :ref => '9292bef79f3cec83d88080268a687cace382a08d'
