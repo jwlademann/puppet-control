@@ -63,25 +63,25 @@ mod 'puppet-nagios',                   :git => 'https://github.com/LandRegistry-
 mod 'puppet-nagiosclient',             :git => 'https://github.com/LandRegistry-Ops/puppet-nagiosclient.git',
                                        :ref => '0.13.0'
 mod 'puppet-postgres',                 :git => 'https://github.com/LandRegistry-Ops/puppet-postgres.git',
-                                       :ref => '1.0.7'
+                                       :ref => '1.0.6'
 mod 'landregistry/powerdns',           :git => 'https://github.com/LandRegistry-Ops/puppet-powerdns.git',
                                        :ref => '0.3.0'
 mod 'landregistry/security',           :git => 'https://github.com/LandRegistry-Ops/puppet-security.git',
-                                       :ref => '0.3.7'
+                                       :ref => '0.3.6'
 mod 'ghoneycutt/hosts',                '2.5.0'
 mod 'puppet-opendj',                   :git => 'https://github.com/LandRegistry-Ops/puppet-opendj.git',
                                        :ref => '9292bef79f3cec83d88080268a687cace382a08d'
 mod 'puppet-openresty',                :git => 'https://github.com/LandRegistry-Ops/puppet-openresty.git',
-                                       :ref => '4aaf904108e65398d9fe8527041dc301ecacea60'
+                                       :ref => '7023eaf5ff710c499888303d745a7e385aaf88e0'
 mod 'landregistry/static_content',     :git => 'https://github.com/LandRegistry/puppet-openresty-static-content.git',
-                                       :ref => 'a247028a20ec5e5c1062e3fffcfc4d90c0557b76'
+                                       :ref => 'a6be24bf019761c08c586783e96a0d5234202236'
 mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-Ops/puppet-geoserver.git',
                                        :ref => '3045ad234315f4bc826e130db6b1433fdf52836b'
 mod 'attachmentgenie-mailhog',         '1.0.0'
 mod 'puppet-redis',                    :git => 'https://github.com/arioch/puppet-redis.git',
                                        :ref => '1.2.3'
 mod 'puppet-pulp',                     :git => 'https://github.com/LandRegistry-Ops/puppet-pulp',
-                                       :ref => '0.0.3'
+                                       :ref => '0.0.4'
 
 
 # Dependency modules
