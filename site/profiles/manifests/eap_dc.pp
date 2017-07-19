@@ -118,6 +118,6 @@ class profiles::eap_dc(){
   $servers = hiera_hash('wildfly::servers',false)
   create_resources('wildfly::resource', $servers)
 
-  #$deployment = hiera_hash('wildfly::deployment',false)
-  #create_resources('wildfly::deployment', $deployment)
+  $deployment = hiera_hash('wildfly::deployment',false)
+  create_resources('wildfly::deployment', $deployment)
 }
