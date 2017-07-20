@@ -34,6 +34,7 @@ listen <%= name %> *:<%= config['port'] %>
     <%- # REDIS CONFIGURATION -%>
     <%- elsif config['mode'] == 'redis' -%>
   mode    tcp
+  option  tcplog
   option  redis-check
       <%- if config['backends'].length > 1 -%>
         <%-
@@ -42,10 +43,14 @@ listen <%= name %> *:<%= config['port'] %>
           # assigned the master role.
         -%>
   option  tcp-check
-
-  tcp-check send info replicationrn
+  <%- if config['redis_auth_password'] -%>
+  tcp-check send AUTH\ <%= config['redis_auth_password'] %>\r\n
+  <%- end -%>
+  tcp-check send PING\r\n
+  tcp-check expect string +PONG
+  tcp-check send info\ replication\r\n
   tcp-check expect string role:master
-  tcp-check send QUITrn
+  tcp-check send QUIT\r\n
   tcp-check expect string +OK
       <%- end -%>
 
