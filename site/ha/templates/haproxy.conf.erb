@@ -45,6 +45,7 @@ listen <%= name %> *:<%= config['port'] %>
   option  tcp-check
   <%- if config['redis_auth_password'] -%>
   tcp-check send AUTH\ <%= config['redis_auth_password'] %>\r\n
+  tcp-check expect string +OK
   <%- end -%>
   tcp-check send PING\r\n
   tcp-check expect string +PONG
