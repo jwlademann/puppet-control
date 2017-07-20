@@ -81,7 +81,7 @@ mod 'attachmentgenie-mailhog',         '1.0.0'
 mod 'puppet-redis',                    :git => 'https://github.com/arioch/puppet-redis.git',
                                        :ref => '1.2.3'
 mod 'puppet-pulp',                     :git => 'https://github.com/LandRegistry-Ops/puppet-pulp',
-                                       :ref => '0.0.5'
+                                       :ref => '0.0.6'
 
 
 # Dependency modules
