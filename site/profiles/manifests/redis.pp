@@ -1,4 +1,4 @@
-# Class profiles::rabbitmq
+# Class profiles::redis
 #
 # This class will manage rabbitmq installations
 #
