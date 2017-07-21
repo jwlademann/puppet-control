@@ -1,7 +1,6 @@
-class profiles::pulp_consumer(
-  $user = undef,
-  $pass = undef,
-  $repobindings = undef,
+class profiles::pulp_pusher(
+  $uname = undef,
+  $pword = undef,
   ){
 
   class { '::pulp::consumer':
@@ -10,11 +9,9 @@ class profiles::pulp_consumer(
     messaging_transport => $pulp::consumer::messaging_transport,
   }
 
-  class { '::pulp::consumer::bind':
-    repobindings => $repobindings,
-    user         => $user,
-    pass         => $pass,
+  class { '::pulp::admin':} ->
+  class { '::pulp::login':
+    uname => $uname,
+    pword => $pword,
   }
-
-
 }
