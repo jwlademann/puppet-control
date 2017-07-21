@@ -41,8 +41,8 @@ class profiles::redis(
   if $master_hostname == undef {
 
     class { '::redis':
-      bind => $bind,
-      port => $port,
+      bind        => $bind,
+      port        => $port,
       requirepass => $password,
     }
 
@@ -55,26 +55,26 @@ class profiles::redis(
     }
 
     class { '::redis':
-      bind => $bind,
-      port => $port,
-      requirepass => $password,
-      masterauth => $password,
+      bind                => $bind,
+      port                => $port,
+      requirepass         => $password,
+      masterauth          => $password,
       min_slaves_to_write => $min_slaves_to_write,
-      min_slaves_max_lag => $min_slaves_max_lag,
-      slaveof => $slaveof
+      min_slaves_max_lag  => $min_slaves_max_lag,
+      slaveof             => $slaveof
     }
 
     class { '::redis::sentinel':
-      sentinel_bind => $bind,
-      redis_port => $port,
-      auth_pass => $password,
-      master_name => $cluster_name,
-      redis_host => $master_ip,
+      sentinel_bind    => $bind,
+      redis_port       => $port,
+      auth_pass        => $password,
+      master_name      => $cluster_name,
+      redis_host       => $master_ip,
       failover_timeout => $failover_timeout,
-      down_after => $down_after,
-      parallel_sync => $parallel_sync,
-      quorum => $quorum,
-      log_file => $sentinel_log_file,
+      down_after       => $down_after,
+      parallel_sync    => $parallel_sync,
+      quorum           => $quorum,
+      log_file         => $sentinel_log_file,
     }
   }
 
