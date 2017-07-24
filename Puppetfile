@@ -67,12 +67,12 @@ mod 'puppet-postgres',                 :git => 'https://github.com/LandRegistry-
 mod 'landregistry/powerdns',           :git => 'https://github.com/LandRegistry-Ops/puppet-powerdns.git',
                                        :ref => '0.3.0'
 mod 'landregistry/security',           :git => 'https://github.com/LandRegistry-Ops/puppet-security.git',
-                                       :ref => '0.3.7'
+                                       :ref => '0.3.8'
 mod 'ghoneycutt/hosts',                '2.5.0'
 mod 'puppet-opendj',                   :git => 'https://github.com/LandRegistry-Ops/puppet-opendj.git',
-                                       :ref => '9292bef79f3cec83d88080268a687cace382a08d'
+                                       :ref => 'd5ca4a4fcaddac366b5a2f2fed62269fb2f2f28c'
 mod 'puppet-openresty',                :git => 'https://github.com/LandRegistry-Ops/puppet-openresty.git',
-                                       :ref => '4aaf904108e65398d9fe8527041dc301ecacea60'
+                                       :ref => '41259c92c04c86af04eccfae5ee84078ea1382c6'
 mod 'landregistry/static_content',     :git => 'https://github.com/LandRegistry/puppet-openresty-static-content.git',
                                        :ref => 'a247028a20ec5e5c1062e3fffcfc4d90c0557b76'
 mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-Ops/puppet-geoserver.git',
