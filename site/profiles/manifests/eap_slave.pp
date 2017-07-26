@@ -86,14 +86,14 @@ class profiles::eap_slave (
     creates  => "${wildfly::dirname}/modules/com/oracle/main/ojdbc7.jar",
     require  => File[$modules],
   }->
-  wildfly_cli { ["/host=${::fqdn}/server-config=server-one:stop","/host=${::fqdn}/server-config=server-two:stop"]:
+  wildfly_cli { ["/host=${::fqdn}/server-config=server-one:stop","/host=${::hostname}/server-config=server-two:stop"]:
     username => $wildfly::remote_username,
     password => $remote_password,
     host     => $wildfly::properties['jboss.domain.master.address'],
     port     => '9990',
     require  => Service['wildfly'],
   }->
-  wildfly_resource { ["/host=${::fqdn}/server-config=server-one","/host=${::fqdn}/server-config=server-two"]:
+  wildfly_resource { ["/host=${::fqdn}/server-config=server-one","/host=${::hostname}/server-config=server-two"]:
     ensure   => absent,
     username => $wildfly::remote_username,
     password => $remote_password,
