@@ -10,4 +10,8 @@ class profiles::pulp_repos(
     group   => 'root',
     mode    => '0644',
   }
+
+  exec { 'Clean Yum cache':
+    command => 'yum clean all'
+  }
 }
