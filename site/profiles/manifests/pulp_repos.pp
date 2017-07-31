@@ -10,14 +10,4 @@ class profiles::pulp_repos(
     group   => 'root',
     mode    => '0644',
   }
-  ~>
-  file { '/etc/yum.repos.d/':
-    ensure  => 'directory',
-    recurse => true,
-    purge   => true,
-  }
-  ~>
-  exec { 'Clean Yum cache':
-    command => 'yum clean all'
-  }
 }
