@@ -13,7 +13,7 @@ mod 'jfryman/selinux',                 '0.4.0'
 mod 'puppet-gradle',                   :git => 'https://github.com/LandRegistry-Ops/puppet-gradle.git',
                                        :ref => '1.1.0'
 mod 'puppet-wsgi',                     :git => 'https://github.com/LandRegistry-Ops/puppet-wsgi.git',
-                                       :ref => '1.3.16'
+                                       :ref => '893fc4c50245d2ac14e65bdf1ff585212e1c6643'
 mod 'leinaddm/htpasswd',               '0.0.3'
 mod 'maestrodev/wget',                 '1.7.3'
 mod 'openstackci/pip',                 :git => 'https://github.com/openstack-infra/puppet-pip.git',
