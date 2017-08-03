@@ -77,7 +77,6 @@ class profiles::application (
 
     ){
     if $healthcheck {
-      notify { "healtcheck is true": }
       if ($app_type in [ 'wsgi', 'jar']) {
         @@nagios_service { "${::hostname}-lr-${name}-http_health_check" :
           ensure                => present,
