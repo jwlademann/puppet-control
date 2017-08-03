@@ -81,7 +81,7 @@ class profiles::application (
       if ($app_type in [ 'wsgi', 'jar']) {
         @@nagios_service { "${::hostname}-lr-${name}-http_health_check" :
           ensure                => present,
-          check_command         => "check_nrpe!check_service_http\\!'127.0.0.1'\\!'/health'\\!'${bind}'\\!'OK'",
+          check_command         => "check_nrpe!check_service_http\\!'127.0.0.1'\\!'/health'\\!'${bind}'\\!'OK,ok'",
           mode                  => '0644',
           owner                 => root,
           use                   => 'generic-service',
