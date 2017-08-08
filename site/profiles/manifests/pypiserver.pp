@@ -10,7 +10,7 @@ class profiles::pypiserver(
   class { 'nginx':
   }
 
-  nginx::resource::vhost { "pypi-mirror":
+  nginx::resource::vhost { 'pypi-mirror':
     ensure      => present,
     listen_port => $listen_port,
     www_root    => '/srv/pypi/web',
