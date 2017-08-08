@@ -1,4 +1,5 @@
 class profiles::pypiserver(
+  $listen_port = undef,
   ){
 
   class {'bandersnatch':
@@ -11,7 +12,7 @@ class profiles::pypiserver(
 
   nginx::resource::vhost { "pypi-mirror":
     ensure      => present,
-    listen_port => 8080,
+    listen_port => $listen_port,
     www_root    => '/srv/pypi/web',
     server_name => ['_'],
     autoindex   => 'on',
