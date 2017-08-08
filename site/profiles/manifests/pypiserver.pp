@@ -4,7 +4,7 @@ class profiles::pypiserver(
 
   class {'bandersnatch':
     document_root => '/srv/pypi',
-    enable_cron => false,
+    enable_cron   => false,
     }
 
   class { 'nginx':
