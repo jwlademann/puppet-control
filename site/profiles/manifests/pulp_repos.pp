@@ -23,7 +23,7 @@ class profiles::pulp_repos(
     command => 'yum clean all'
     }
   }
- else {
+  else {
     exec { 'Clean Yum cache':
     command => 'yum clean all'
     }
