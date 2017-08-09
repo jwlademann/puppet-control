@@ -13,7 +13,7 @@ class profiles::pulp_repos(
     mode    => '0644',
   }
 
-  if $purge_unmanaged_yum_repos { 
+  if $purge_unmanaged_yum_repos {
     file { '/etc/yum.repos.d/':
       ensure  => 'directory',
       recurse => true,
@@ -24,8 +24,8 @@ class profiles::pulp_repos(
     }
   }
  else {
-  exec { 'Clean Yum cache':
+    exec { 'Clean Yum cache':
     command => 'yum clean all'
+    }
   }
- }
 }
