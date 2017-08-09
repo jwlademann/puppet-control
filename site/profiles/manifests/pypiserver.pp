@@ -21,7 +21,7 @@ class profiles::pypiserver(
   # Load SELinuux policy for NginX
   selinux::module { 'httpd_t':
     ensure => 'present',
-    source => '/vagrant/nginx_pypi.te'
+    source => 'puppet:///modules/profiles/nginx_pypi.te'
   }
 
 Class['::nginx::config'] -> Nginx::Resource::Vhost <| |>
