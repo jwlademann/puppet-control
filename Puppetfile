@@ -81,7 +81,7 @@ mod 'attachmentgenie/mailhog',         '1.0.0'
 mod 'puppet-redis',                    :git => 'https://github.com/LandRegistry-Ops/puppet-redis.git',
                                        :ref => 'v3.2.1'
 mod 'puppet-pulp',                     :git => 'https://github.com/LandRegistry-Ops/puppet-pulp',
-                                       :ref => '0.0.7'
+                                       :ref => '0.0.8'
 mod 'puppet-bandersnatch',             :git => 'https://github.com/LandRegistry-Ops/puppet-bandersnatch',
                                        :ref => '192db31b2a1c9f3113df4ff49a1613596fa8f18d'
 mod 'puppet-pypiconfig',               :git => 'https://github.com/LandRegistry-Ops/puppet-pypiconfig',
