@@ -108,7 +108,7 @@ class profiles::jenkins (
     configure_firewall => false,
     job_hash           => $jobs,
     version            => $version,
-    repo               => hiera('llc_jenkins_manage_repo', undef),
+    repo               => hiera('jenkins_manage_repo', undef),
   }
 
   file { '/var/lib/jenkins/.ssh':
