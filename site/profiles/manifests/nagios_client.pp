@@ -44,8 +44,6 @@ class profiles::nagios_client(
 
   ){
 
-  #$hostgroups = "network_location_${::network_location},${::application_environment},puppet_${::puppet_environment},${::service}"
-
   $hostgroups = ["network_location_${::network_location}",$::application_environment,"puppet_${::puppet_environment}","service_${::service}"]
 
   # Check that host groups are configured on server (nagios server will fail to
