@@ -13,7 +13,7 @@ mod 'jfryman/selinux',                 '0.4.0'
 mod 'puppet-gradle',                   :git => 'https://github.com/LandRegistry-Ops/puppet-gradle.git',
                                        :ref => '1.1.0'
 mod 'puppet-wsgi',                     :git => 'https://github.com/LandRegistry-Ops/puppet-wsgi.git',
-                                       :ref => '1.3.16'
+                                       :ref => '1.4.0'
 mod 'leinaddm/htpasswd',               '0.0.3'
 mod 'maestrodev/wget',                 '1.7.3'
 mod 'openstackci/pip',                 :git => 'https://github.com/openstack-infra/puppet-pip.git',
@@ -44,7 +44,7 @@ mod 'puppet-files',                    :git => 'https://github.com/LandRegistry-
 mod 'puppet-crons',                    :git => 'https://github.com/LandRegistry-Ops/puppet-crons.git',
                                        :ref => '1.0.0'
 mod 'puppet-filebeat',                 :git => 'https://github.com/LandRegistry-Ops/puppet-filebeat.git',
-                                       :ref => '1.0.12'
+                                       :ref => '1.1.2'
 mod 'puppet-packetbeat',               :git => 'https://github.com/LandRegistry-Ops/puppet-packetbeat.git',
                                        :ref => '1.0.5'
 mod 'puppet-logstash',                 :git => 'https://github.com/LandRegistry-Ops/puppet-logstash.git',
@@ -63,25 +63,30 @@ mod 'puppet-nagios',                   :git => 'https://github.com/LandRegistry-
 mod 'puppet-nagiosclient',             :git => 'https://github.com/LandRegistry-Ops/puppet-nagiosclient.git',
                                        :ref => '0.13.1'
 mod 'puppet-postgres',                 :git => 'https://github.com/LandRegistry-Ops/puppet-postgres.git',
-                                       :ref => '1.0.8'
+                                       :ref => '1.0.10'
 mod 'landregistry/powerdns',           :git => 'https://github.com/LandRegistry-Ops/puppet-powerdns.git',
                                        :ref => '0.3.0'
 mod 'landregistry/security',           :git => 'https://github.com/LandRegistry-Ops/puppet-security.git',
-                                       :ref => '0.3.8'
+                                       :ref => '0.3.10'
 mod 'ghoneycutt/hosts',                '2.5.0'
 mod 'puppet-opendj',                   :git => 'https://github.com/LandRegistry-Ops/puppet-opendj.git',
                                        :ref => 'd5ca4a4fcaddac366b5a2f2fed62269fb2f2f28c'
 mod 'puppet-openresty',                :git => 'https://github.com/LandRegistry-Ops/puppet-openresty.git',
-                                       :ref => '6d18e68532256c97d238221a9f79f42837da1f70'
+                                       :ref => 'f322c34db7d9365dee83ed9764cf74b03fcf371a'
 mod 'landregistry/static_content',     :git => 'https://github.com/LandRegistry/puppet-openresty-static-content.git',
-                                       :ref => 'a247028a20ec5e5c1062e3fffcfc4d90c0557b76'
+                                       :ref => '2782cd98bcd876b1c562e566dd50b3c5129385ff'
 mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-Ops/puppet-geoserver.git',
                                        :ref => '3045ad234315f4bc826e130db6b1433fdf52836b'
-mod 'attachmentgenie-mailhog',         '1.0.0'
+mod 'attachmentgenie/mailhog',         '1.0.0'
 mod 'puppet-redis',                    :git => 'https://github.com/LandRegistry-Ops/puppet-redis.git',
                                        :ref => 'v3.2.1'
 mod 'puppet-pulp',                     :git => 'https://github.com/LandRegistry-Ops/puppet-pulp',
-                                       :ref => '0.0.6'
+                                       :ref => '0.0.8'
+mod 'puppet-bandersnatch',             :git => 'https://github.com/LandRegistry-Ops/puppet-bandersnatch',
+                                       :ref => '192db31b2a1c9f3113df4ff49a1613596fa8f18d'
+mod 'puppet-pypiconfig',               :git => 'https://github.com/LandRegistry-Ops/puppet-pypiconfig',
+                                       :ref => '1.0.1'
+
 
 
 # Dependency modules
@@ -106,7 +111,7 @@ mod 'richardc/datacat',                      '0.6.2'
 mod 'stahnma/epel',                          '1.2.2'
 mod 'ajjahn/dns',                            '2.0.2'
 mod 'dsestero/download_uncompress',          '1.3.0'
-mod 'herculesteam-augeasproviders_core',     '2.1.3'
-mod 'herculesteam-augeasproviders_shellvar', '2.2.1'
-mod 'camptocamp-systemd',                    '0.4.0'
-mod 'camptocamp-tomcat',                     '0.16.2'
+mod 'herculesteam/augeasproviders_core',     '2.1.3'
+mod 'herculesteam/augeasproviders_shellvar', '2.2.1'
+mod 'camptocamp/systemd',                    '0.4.0'
+mod 'camptocamp/tomcat',                     '0.16.2'
