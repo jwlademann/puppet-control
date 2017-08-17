@@ -12,7 +12,7 @@ class profiles::clamavd (
     ensure => 'directory',
   }
 
-  nginx::resource::vhost { "clamavd":
+  nginx::resource::vhost { 'clamavd':
     ensure      => present,
     listen_port => 8080,
     www_root    => '/tmp/clam',
