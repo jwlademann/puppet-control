@@ -1,6 +1,5 @@
 class profiles::clamav_localdef (
-
-) {
+  ) {
   $clamdir = '/opt/clam'
 
   class { 'nginx':
