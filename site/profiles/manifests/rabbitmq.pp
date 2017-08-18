@@ -25,7 +25,9 @@ class profiles::rabbitmq(
   $cluster                   = false,
   $cluster_nodes             = [],
   $erlang_cookie             = 'super_secret_key',
+  $erlang_epel_enable        = true,
   $admin_enable              = false,
+  $monitoring                = true,
   $rabbitmq_users            = hiera_hash('rabbitmq_users', false),
   $rabbitmq_user_permissions = hiera_hash('rabbitmq_user_permissions', false),
   $rabbitmq_vhosts           = hiera_hash('rabbitmq_vhosts', false),
@@ -34,7 +36,9 @@ class profiles::rabbitmq(
 
 ){
 
-  include profiles::rabbitmq_monitoring
+  if $monitoring {
+    include profiles::rabbitmq_monitoring
+  }
 
   # Load SELinuux policy for RabbitMQ
   selinux::module { 'rabbit':
@@ -42,7 +46,7 @@ class profiles::rabbitmq(
     source => 'puppet:///modules/profiles/rabbit.te'
   }
 
-  class { 'erlang': epel_enable => true }
+  class { 'erlang': epel_enable => $erlang_epel_enable }
   include ::erlang
 
   # Install rabbit direct from rabbit (if not epel version)
