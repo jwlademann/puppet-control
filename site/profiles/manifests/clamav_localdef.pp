@@ -1,6 +1,7 @@
 class profiles::clamavd (
 
 ) {
+  $clamdir = '/opt/clam'
 
   class { 'nginx':
   }
@@ -8,14 +9,14 @@ class profiles::clamavd (
   class { 'cpan':
   }
 
-  file { '/tmp/clam':
+  file { $clamdir:
     ensure => 'directory',
   }
 
   nginx::resource::vhost { 'clamavd':
     ensure      => present,
     listen_port => 8080,
-    www_root    => '/tmp/clam',
+    www_root    => $clamdir,
     server_name => ['_'],
     autoindex   => 'on',
   }
