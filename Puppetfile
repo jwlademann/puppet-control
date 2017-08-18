@@ -82,10 +82,8 @@ mod 'puppet-redis',                    :git => 'https://github.com/LandRegistry-
                                        :ref => 'v3.2.1'
 mod 'puppet-pulp',                     :git => 'https://github.com/LandRegistry-Ops/puppet-pulp',
                                        :ref => '0.0.8'
-mod 'puppet-bandersnatch',             :git => 'https://github.com/LandRegistry-Ops/puppet-bandersnatch',
-                                       :ref => '192db31b2a1c9f3113df4ff49a1613596fa8f18d'
-mod 'puppet-pypiconfig',               :git => 'https://github.com/LandRegistry-Ops/puppet-pypiconfig',
-                                       :ref => '1.0.1'
+mod 'puppet-cpan',                     :git => 'https://github.com/meltwater/puppet-cpan',
+                                       :ref => '14ec4ac9850bcc55d6cc5bad52a7fe9ce3745c32'
 
 
 
