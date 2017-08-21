@@ -7,9 +7,9 @@ class profiles::pulp_consumer(
 
   class { '::pulp::consumer':
     source_pulp_packages_from_external_repo => $pulp::consumer::source_pulp_packages_from_external_repo,
-    host                => $pulp::consumer::host,
-    messaging_host      => $pulp::consumer::messaging_host,
-    messaging_transport => $pulp::consumer::messaging_transport,
+    host                                    => $pulp::consumer::host,
+    messaging_host                          => $pulp::consumer::messaging_host,
+    messaging_transport                     => $pulp::consumer::messaging_transport,
   }
 
   class { '::pulp::consumer::bind':
