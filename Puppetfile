@@ -72,20 +72,18 @@ mod 'ghoneycutt/hosts',                '2.5.0'
 mod 'puppet-opendj',                   :git => 'https://github.com/LandRegistry-Ops/puppet-opendj.git',
                                        :ref => 'd5ca4a4fcaddac366b5a2f2fed62269fb2f2f28c'
 mod 'puppet-openresty',                :git => 'https://github.com/LandRegistry-Ops/puppet-openresty.git',
-                                       :ref => '4cfebd5240a4799b8147c2e4c9a27d394962f895'
+                                       :ref => '63c53a355e42ce601cac39281c7307cc0bd40193'
 mod 'landregistry/static_content',     :git => 'https://github.com/LandRegistry/puppet-openresty-static-content.git',
-                                       :ref => 'dffa973935acc930528fb4ab213b532ad36a3ee3'
+                                       :ref => '2427dbb6edc2f312e5bcf7b6023c38eae80c8ab3'
 mod 'puppet-geoserver',                :git => 'https://github.com/LandRegistry-Ops/puppet-geoserver.git',
                                        :ref => '3045ad234315f4bc826e130db6b1433fdf52836b'
 mod 'attachmentgenie/mailhog',         '1.0.0'
 mod 'puppet-redis',                    :git => 'https://github.com/LandRegistry-Ops/puppet-redis.git',
                                        :ref => 'v3.2.1'
 mod 'puppet-pulp',                     :git => 'https://github.com/LandRegistry-Ops/puppet-pulp',
-                                       :ref => '0.0.8'
-mod 'puppet-bandersnatch',             :git => 'https://github.com/LandRegistry-Ops/puppet-bandersnatch',
-                                       :ref => '192db31b2a1c9f3113df4ff49a1613596fa8f18d'
-mod 'puppet-pypiconfig',               :git => 'https://github.com/LandRegistry-Ops/puppet-pypiconfig',
-                                       :ref => '1.0.1'
+                                       :ref => '0.0.10'
+mod 'puppet-cpan',                     :git => 'https://github.com/meltwater/puppet-cpan',
+                                       :ref => '14ec4ac9850bcc55d6cc5bad52a7fe9ce3745c32'
 
 
 
