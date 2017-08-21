@@ -63,14 +63,14 @@ class profiles::rabbitmq(
 if $rabbitmq_key {
   file{'/tmp/rabbit.pub.key':
     ensure  => file,
-    content => hiera($rabbitmq_key),
+    content => $rabbitmq_key,
   }
 }
   case $cluster {
     true : {
       class { '::rabbitmq':
 
-       key_content               => $rabbitmq_key,
+        key_content              => $rabbitmq_key,
         package_gpg_key          => '/tmp/rabbit.pub.key',
         version                  => "${version}-1",
         repos_ensure             => true,
@@ -86,16 +86,14 @@ if $rabbitmq_key {
         admin_enable             => $admin_enable,
         require                  => Class[erlang]
 
-
-
       }
 
     }
 
     default : {
       class { '::rabbitmq':
-              key_content      => $rabbitmq_key,
-             package_gpg_key  => '/tmp/rabbit.pub.key',
+        key_content       => $rabbitmq_key,
+        package_gpg_key   => '/tmp/rabbit.pub.key',
         version           => "${version}-1",
         repos_ensure      => true,
         port              => $port,
