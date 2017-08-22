@@ -32,8 +32,9 @@ class profiles::rabbitmq(
   $rabbitmq_user_permissions = hiera_hash('rabbitmq_user_permissions', false),
   $rabbitmq_vhosts           = hiera_hash('rabbitmq_vhosts', false),
   $rabbitmq_policy           = hiera_hash('rabbitmq_policy', false),
-  $time_period               = hiera('nagios_time_period', '24x7')
-
+  $time_period               = hiera('nagios_time_period', '24x7'),
+  $rabbitmq_key              = undef,
+  $package_gpg_key           = undef,
 ){
 
   if $monitoring {
@@ -61,19 +62,18 @@ class profiles::rabbitmq(
     notify { "rabbit-server package version ${version} will be installed from epel":}
   }
 
-
-if $rabbitmq_key {
-  file{'/tmp/rabbit.pub.key':
-    ensure  => file,
-    content => $rabbitmq_key,
+  if $rabbitmq_key {
+    file{ $package_gpg_key:
+      ensure  => file,
+      content => $rabbitmq_key,
+    }
   }
-}
+
   case $cluster {
     true : {
       class { '::rabbitmq':
-
         key_content              => $rabbitmq_key,
-        package_gpg_key          => '/tmp/rabbit.pub.key',
+        package_gpg_key          => $package_gpg_key,
         version                  => "${version}-1",
         repos_ensure             => true,
         port                     => $port,
@@ -95,7 +95,7 @@ if $rabbitmq_key {
     default : {
       class { '::rabbitmq':
         key_content       => $rabbitmq_key,
-        package_gpg_key   => '/tmp/rabbit.pub.key',
+        package_gpg_key   => $package_gpg_key,
         version           => "${version}-1",
         repos_ensure      => true,
         port              => $port,
